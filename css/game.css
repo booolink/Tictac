@@ -1,0 +1,146 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, #app {
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+.block_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.block_area {
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+h1 {
+  display: inline-block;
+  margin-top: 65px;
+}
+
+h2 {
+  width: 300px;
+  height: 200px;
+  pointer-events: none;
+  text-align: center;
+  font-size: 100px;
+  position: absolute;
+  top: 180px;
+  z-index: 2;
+}
+
+h3 {
+  position: absolute;
+  top: 420px;
+  cursor: pointer;
+}
+
+h3:hover {
+  border-bottom: 1px solid white;
+}
+
+.number {
+  color: white;
+  font-family: '微軟正黑體';
+  font-size: 12px;
+  margin-left: 3px;
+  opacity: .7;
+}
+
+.block {
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(136, 152, 255, 0.469);
+  position: relative;
+}
+
+.block.small {
+  width: 70px !important;
+  height: 70px !important;
+  margin-top: 50px;
+}
+
+.block:hover {
+  background-color: rgba(255, 255, 255, 0.122);
+}
+
+.block.circle:before, .block.circle:after {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.block.circle:before {
+  width: 90%;
+  height: 90%;
+  background-color: #f35;
+}
+
+.block.circle:after {
+  width: 65%;
+  height: 65%;
+  background-color: #222;
+}
+
+.block.cross:before, .block.cross:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 15%;
+  background-color: #46f;
+  -webkit-transition: .3s;
+  transition: .3s;
+  top: 50%;
+  left: 50%;
+}
+
+.block.cross:before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.block.cross:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+/*# sourceMappingURL=game.css.map */
